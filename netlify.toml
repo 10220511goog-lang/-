@@ -1,0 +1,10 @@
+[build]
+  command = "vite build"
+  publish = "dist"
+
+# Single Page Application (SPA) redirect rule
+# Ensures that route refreshing or manual path entering in React Router redirects to index.html with a status 200
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

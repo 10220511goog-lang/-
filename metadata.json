@@ -1,0 +1,6 @@
+{
+  "name": "GreenBuilt Taiwan",
+  "description": "綠築再生科技 (GreenBuilt Taiwan) 官方自癒混凝土技術智聯系統。包括配合荷蘭台夫特專利的 AI 智能輔助導航以及自動網頁擷取提煉端點。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
