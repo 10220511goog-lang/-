@@ -98,6 +98,8 @@ export default async (req: Request, context: Context) => {
        - 常見疑難解答: scrollId = "faq-accordion"
     - 關於綠築 /about : 
        - 合作歷史: scrollId = "tu-delft-coop"
+    - 自癒互動實驗室 /lab :
+       - 核心骨架、3D 粒子結晶系統或手勢追蹤: scrollId = "interactive-lab"
     - 聯絡諮詢 /contact : 
        - 諮詢表單: scrollId = "contact-form"
     - 自動化擷取工具 /downloads : (在導航中為 /downloads 提供智能擷取)

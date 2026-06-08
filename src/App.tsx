@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import FAQ from "./components/FAQ";
 import About from "./components/About";
 import Downloads from "./components/Downloads";
+import Lab from "./components/InteractiveLab";
 import Contact from "./components/Contact";
 import Copilot from "./components/Copilot";
 import Footer from "./components/Footer";
@@ -29,6 +30,7 @@ export default function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/about" element={<About />} />
             <Route path="/downloads" element={<Downloads />} />
+            <Route path="/lab" element={<Lab />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

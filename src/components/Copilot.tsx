@@ -14,7 +14,7 @@ export default function Copilot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "model",
-      content: "您好！我是綠築再生科技的 **AI 智能導航助理**。您可以問我任何關於荷蘭 Basilisk 自癒混凝土、裂縫修復原理、各項產品配置特性，或請我幫您導航引導頁面、甚至透過我們的「自動化網頁內容擷取器」自動分析！\n\n試問我以下工程與技術：\n* **「自癒添加劑 ER7 的特點是什麼？」**\n* **「如何削減 25% 建築物碳足跡？」** \n* **「帶我去看合作夥伴的評論反饋」**"
+      content: "您好！我是綠築再生科技的 **AI 智能導航助理**。您可以問我任何關於荷蘭 Basilisk 自癒混凝土、裂縫修復原理、各項產品配置特性，或請我導航到新落成的 **「自癒互動實驗室」** 親手體驗 3D 體感裂縫晶體合龍！\n\n試問我以下工程與技術：\n* **「帶我去玩 3D 體感粒子自癒實驗室」**\n* **「自癒添加劑 ER7 的特點是什麼？」**\n* **「如何削減 25% 建築物碳足跡？」**"
     }
   ]);
   const [inputMsg, setInputMsg] = useState("");
@@ -78,6 +78,7 @@ export default function Copilot() {
                            path === "/technology" ? "技術原理" : 
                            path === "/products" ? "產品介紹" : 
                            path === "/projects" ? "工程實績" : 
+                           path === "/lab" ? "自癒互動實驗室" : 
                            path === "/faq" ? "常見問題" : "指定網頁"}**，並聚焦至對應區塊！_`
               }
             ]);

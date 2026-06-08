@@ -21,6 +21,7 @@ export default function Navbar() {
     { name: "技術原理", path: "/technology" },
     { name: "產品介紹", path: "/products" },
     { name: "工程實績", path: "/projects" },
+    { name: "自癒互動實驗室", path: "/lab" },
     { name: "常見問題", path: "/faq" },
     { name: "關於綠築", path: "/about" },
     { name: "自動擷取工具", path: "/downloads" },
