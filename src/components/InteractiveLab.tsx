@@ -1032,37 +1032,32 @@ export default function InteractiveLab() {
               />
 
               {/* Dynamic Camera webcam visual frame on floating side PIP panel */}
-              <AnimatePresence>
-                {isCameraActive && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.8, x: 20 }}
-                    animate={{ opacity: 1, scale: 1, x: 0 }}
-                    exit={{ opacity: 0, scale: 0.8, x: 20 }}
-                    className="absolute bottom-4 right-4 w-32 sm:w-44 aspect-video rounded-2xl overflow-hidden border border-emerald-500/20 shadow-xl bg-black/60 backdrop-blur"
-                  >
-                    {/* Live Video hidden but streaming */}
-                    <video
-                      ref={videoRef}
-                      className="absolute inset-0 w-full h-full object-cover -scale-x-100 opacity-60"
-                      autoPlay
-                      playsInline
-                      muted
-                    />
+              <div
+                className={`absolute bottom-4 right-4 w-32 sm:w-44 aspect-video rounded-2xl overflow-hidden border border-emerald-500/20 shadow-xl bg-black/60 backdrop-blur transition-all duration-300 z-10 ${
+                  isCameraActive ? "opacity-100 scale-100 translate-y-0 pointer-events-auto" : "opacity-0 scale-75 translate-y-4 pointer-events-none"
+                }`}
+              >
+                {/* Live Video hidden but streaming */}
+                <video
+                  ref={videoRef}
+                  className="absolute inset-0 w-full h-full object-cover -scale-x-100 opacity-60"
+                  autoPlay
+                  playsInline
+                  muted
+                />
 
-                    {/* Hand joint coordinates overlay sketch */}
-                    <canvas
-                      ref={trackingCanvasRef}
-                      width={176}
-                      height={132}
-                      className="absolute inset-0 w-full h-full object-cover -scale-x-100 z-10"
-                    />
+                {/* Hand joint coordinates overlay sketch */}
+                <canvas
+                  ref={trackingCanvasRef}
+                  width={176}
+                  height={132}
+                  className="absolute inset-0 w-full h-full object-cover -scale-x-100 z-10"
+                />
 
-                    <div className="absolute top-1.5 left-1.5 bg-black/75 px-1.5 py-0.5 rounded text-[8px] font-mono border border-emerald-500/20 text-emerald-400 uppercase font-bold tracking-widest leading-none">
-                      LIVE FEED
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                <div className="absolute top-1.5 left-1.5 bg-black/75 px-1.5 py-0.5 rounded text-[8px] font-mono border border-emerald-500/20 text-emerald-400 uppercase font-bold tracking-widest leading-none">
+                  LIVE FEED
+                </div>
+              </div>
 
               {/* Gesture HUD Status overlays */}
               <div className="absolute top-4 left-4 flex flex-col gap-1 text-[9px] font-mono text-zinc-500">
