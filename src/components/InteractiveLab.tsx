@@ -155,25 +155,67 @@ export default function InteractiveLab() {
       console.error("GreenBuilt Lab interaction initialization failed", error);
     }
     translate();
-    const bridgeInlineEvents = () => {
-      root.querySelectorAll<HTMLElement>("[onclick], [onchange]").forEach((element) => {
-        (["onclick", "onchange"] as const).forEach((attribute) => {
-          const expression = element.getAttribute(attribute);
-          if (!expression) return;
-          const match = expression.trim().match(/^([A-Za-z_$][\w$]*)\(([^)]*)\)$/);
-          if (!match) return;
-          const functionName = match[1];
-          const rawArguments = match[2].trim();
-          const args = rawArguments ? rawArguments.split(",").map((value) => Number(value.trim())) : [];
-          element.removeAttribute(attribute);
-          element.addEventListener(attribute === "onclick" ? "click" : "change", () => {
-            const handler = interactionApi[functionName];
-            if (typeof handler === "function") handler(...args);
-          });
-        });
-      });
+    const invoke = (functionName: string, ...args: number[]) => {
+      const handler = interactionApi[functionName];
+      if (typeof handler !== "function") {
+        console.warn(`GreenBuilt Lab handler unavailable: ${functionName}`);
+        return;
+      }
+      try {
+        handler(...args);
+      } catch (error) {
+        console.error(`GreenBuilt Lab handler failed: ${functionName}`, error);
+      }
     };
-    bridgeInlineEvents();
+
+    // 移除原始 inline handler，改由 React 容器統一委派，避免 onclick 在 innerHTML 中失效。
+    root.querySelectorAll<HTMLElement>("[onclick], [onchange]").forEach((element) => {
+      element.removeAttribute("onclick");
+      element.removeAttribute("onchange");
+    });
+
+    const clickHandler = (event: Event) => {
+      const target = event.target as HTMLElement | null;
+      const button = target?.closest<HTMLElement>("button, .slide-tab");
+      if (!button || !root.contains(button)) return;
+
+      if (button.id === "startBtn" || button.title === "Play") {
+        event.preventDefault();
+        invoke("startSimulation");
+      } else if (button.id === "nextBtn") {
+        event.preventDefault();
+        invoke("nextSlide");
+      } else if (button.id === "prevBtn") {
+        event.preventDefault();
+        invoke("prevSlide");
+      } else if (button.id === "narrateBtn") {
+        event.preventDefault();
+        invoke("toggleNarration");
+      } else if (button.id === "testVoice" || button.textContent?.trim() === "測試" || button.textContent?.trim() === "Test") {
+        event.preventDefault();
+        invoke("testVoice");
+      } else if (button.title === "Reset" || button.textContent?.trim() === "重設" || button.textContent?.trim() === "Reset") {
+        event.preventDefault();
+        invoke("resetSimulation");
+      } else if (button.classList.contains("slide-tab")) {
+        const tabs = Array.from(root.querySelectorAll(".slide-tab"));
+        const index = tabs.indexOf(button);
+        if (index >= 0) {
+          event.preventDefault();
+          invoke("goToSlide", index);
+        }
+      }
+    };
+    root.addEventListener("click", clickHandler);
+
+    const changeHandler = (event: Event) => {
+      const target = event.target as HTMLSelectElement | HTMLInputElement | null;
+      if (!target || !root.contains(target)) return;
+      if (target.id === "autoPlayCheck") invoke("toggleAutoPlay");
+      if (target.id === "speechRate") invoke("updateSpeechRate");
+      if (target.id === "voiceSelect") invoke("updateSelectedVoice");
+    };
+    root.addEventListener("change", changeHandler);
 
     const start = window.setTimeout(() => {
       root.querySelectorAll<HTMLElement>(".animate-on-scroll").forEach((element) => {
@@ -184,6 +226,8 @@ export default function InteractiveLab() {
     return () => {
       window.clearTimeout(start);
       observer.disconnect();
+      root.removeEventListener("click", clickHandler);
+      root.removeEventListener("change", changeHandler);
       if ("speechSynthesis" in window) window.speechSynthesis.cancel();
       const canvas = root.querySelector<HTMLCanvasElement>("#simulationCanvas");
       const context = canvas?.getContext("2d");
