@@ -1,0 +1,416 @@
+<!-- Hero Section -->
+<div class="min-h-screen grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-20 items-center">
+    <!-- Left Content -->
+    <div class="lg:col-span-5 flex flex-col gap-4 sm:gap-5 md:gap-6">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 w-fit animate-on-scroll" style="animation-delay: 0ms">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span class="text-[9px] sm:text-[10px] uppercase text-emerald-300 tracking-widest font-mono font-medium">
+                自癒互動實驗室
+            </span>
+        </div>
+        
+        <!-- Main Heading -->
+        <h1 class="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[1.1] font-bold tracking-tight animate-on-scroll" style="animation-delay: 100ms">
+            自癒混凝土中的
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 gradient-animated">
+                CaCO₃
+            </span>
+            結晶生長
+            <br class="hidden sm:block"/>
+            <span class="text-neutral-200">自癒混凝土</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="text-xs sm:text-sm md:text-base text-neutral-400 font-light max-w-lg leading-relaxed animate-on-scroll" style="animation-delay: 200ms">
+            探索「微生物誘導碳酸鈣沉澱」（MICP）—— Bacillus芽孢桿菌觸發生化反應，生成方解石結晶體，自主封閉裂縫並恢復結構完整性。
+        </p>
+
+        <!-- Key Info -->
+        <div class="flex flex-wrap gap-2 sm:gap-3 animate-on-scroll" style="animation-delay: 250ms">
+            <div class="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] sm:text-xs">
+                <span class="text-emerald-400">🦠</span>
+                <span class="text-neutral-400">Bacillus 芽孢桿菌</span>
+            </div>
+            <div class="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] sm:text-xs">
+                <span class="text-cyan-400">💎</span>
+                <span class="text-neutral-400">方解石結晶</span>
+            </div>
+            <div class="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] sm:text-xs">
+                <span class="text-blue-400">💧</span>
+                <span class="text-neutral-400">水分與氧氣活化</span>
+            </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap gap-2 sm:gap-3 items-center animate-on-scroll" style="animation-delay: 300ms">
+            <button id="startBtn" onclick="startSimulation()" class="group flex overflow-hidden uppercase transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.5)] text-[10px] xs:text-xs md:text-sm font-medium text-white tracking-widest rounded-full px-4 xs:px-6 md:px-10 py-2.5 xs:py-3 md:py-4 relative items-center justify-center">
+                <div class="absolute inset-0 -z-20 rounded-full overflow-hidden p-[1px]">
+                    <div class="absolute inset-[-100%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#10b981_360deg)]" style="animation: beam-spin 3s linear infinite;"></div>
+                    <div class="absolute inset-[1px] rounded-full bg-black"></div>
+                </div>
+                <div class="absolute inset-[2px] rounded-full bg-zinc-950 -z-10 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-b from-zinc-800/60 to-transparent"></div>
+                    <div class="absolute inset-0 opacity-30 mix-blend-overlay" style="background-image: radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 12px 12px; animation: dots-move 8s linear infinite"></div>
+                    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-emerald-500/10 blur-2xl rounded-full pointer-events-none transition-colors duration-500 group-hover:bg-emerald-500/30"></div>
+                </div>
+                <span class="relative z-10 text-white/90 transition-colors group-hover:text-white">開始模擬</span>
+                <svg class="w-3 h-3 sm:w-4 sm:h-4 ml-1.5 sm:ml-2 relative z-10 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+            </button>
+            <button onclick="resetSimulation()" class="flex items-center gap-1.5 sm:gap-2 px-3 xs:px-5 py-2.5 xs:py-3 md:py-4 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-all text-[10px] xs:text-xs md:text-sm text-neutral-300 hover:text-white">
+                <svg class="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                </svg>
+                重設
+            </button>
+        </div>
+
+        <div class="mt-1 sm:mt-2 font-mono text-[9px] sm:text-[10px] md:text-xs text-neutral-500 animate-on-scroll" style="animation-delay: 400ms">
+            <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-white/5 border border-white/5 w-fit">
+                <span class="text-emerald-400">細菌</span>
+                <span>+</span>
+                <span class="text-cyan-400">Ca²⁺</span>
+                <span>+</span>
+                <span class="text-blue-400">CO₃²⁻</span>
+                <span>→</span>
+                <span class="text-amber-400 font-semibold">CaCO₃</span>
+                <span class="text-neutral-600">↓</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Content - 3D Simulation Scene -->
+    <div class="lg:col-span-7 h-[300px] xs:h-[350px] sm:h-[420px] md:h-[500px] lg:h-[550px] xl:h-[600px] 2xl:h-[700px] relative perspective-scene animate-on-scroll" style="animation-delay: 500ms">
+        <div class="glass-panel overflow-hidden flex flex-col rotate-3d rounded-xl sm:rounded-2xl absolute inset-0 shadow-2xl shadow-emerald-500/5">
+            <!-- Window Header -->
+            <div class="flex bg-white/5 h-8 sm:h-10 border-b border-white/5 px-3 sm:px-4 backdrop-blur-md gap-2 items-center shrink-0">
+                <div class="flex gap-1 sm:gap-1.5">
+                    <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-red-500/60"></div>
+                    <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-yellow-500/60"></div>
+                    <div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-green-500/60"></div>
+                </div>
+                <div class="mx-auto font-mono text-[8px] sm:text-[10px] text-neutral-400 flex items-center gap-1.5 sm:gap-2">
+                    <span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-500/60 animate-pulse"></span>
+                    micp-simulation.lab
+                </div>
+                <div id="simTime" class="text-[8px] sm:text-[9px] text-neutral-500 font-mono">00:00</div>
+            </div>
+
+            <!-- Main Visualization Area - FLEX CENTERING -->
+            <div id="simulationCanvas" class="flex-1 overflow-hidden bg-gradient-to-br from-neutral-950 via-emerald-950/10 to-cyan-950/10 relative flex items-center justify-center">
+                <!-- Animated Grid Background -->
+                <div class="absolute inset-0 opacity-25" style="background-image: linear-gradient(rgba(16,185,129,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.2) 1px, transparent 1px); background-size: 35px 35px;"></div>
+                
+                <!-- Radial Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/60"></div>
+
+                <!-- Concrete Block - REMOVED ABSOLUTE CENTERING CLASSES, RELYING ON FLEX PARENT -->
+                <div id="concreteBlock" class="relative w-[80%] xs:w-56 sm:w-64 md:w-72 lg:w-80 xl:w-96 2xl:w-[450px] h-28 xs:h-32 sm:h-40 md:h-44 lg:h-48 xl:h-56 2xl:h-64 rounded-lg sm:rounded-xl overflow-hidden shadow-2xl z-0">
+                    <div class="absolute inset-0 concrete-texture"></div>
+                    <div class="absolute inset-0 border-2 border-gray-600/50 rounded-lg sm:rounded-xl"></div>
+                    
+                    <div class="absolute w-4 sm:w-6 h-3 sm:h-5 bg-gray-400/20 rounded-full blur-sm" style="top: 12%; left: 8%;"></div>
+                    <div class="absolute w-3 sm:w-5 h-2 sm:h-4 bg-gray-500/20 rounded-full blur-sm" style="top: 72%; left: 78%;"></div>
+                    <div class="absolute w-4 sm:w-6 h-2 sm:h-4 bg-gray-400/20 rounded-full blur-sm" style="top: 22%; left: 65%;"></div>
+                    <div class="absolute w-3 sm:w-4 h-2 sm:h-3 bg-gray-500/20 rounded-full blur-sm" style="top: 68%; left: 18%;"></div>
+                    <div class="absolute w-3 sm:w-5 h-2 sm:h-4 bg-gray-400/20 rounded-full blur-sm" style="top: 20%; left: 35%;"></div>
+
+                    <div id="stressIndicators" class="absolute inset-0 pointer-events-none">
+                        <div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 48%; left: 3%;"></div>
+                        <div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 51%; left: 18%;"></div>
+                        <div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 49%; left: 33%;"></div>
+                        <div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 50%; left: 50%;"></div>
+                        <div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 48%; left: 67%;"></div>
+                        <div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 51%; left: 82%;"></div>
+                        <div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 49%; left: 97%;"></div>
+                    </div>
+
+                    <div id="crackLine" class="absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2 opacity-0" style="clip-path: inset(0 100% 0 0);">
+                        <div class="absolute inset-0 bg-gradient-to-r from-red-600 via-red-500 to-red-600"></div>
+                        <div class="absolute inset-0 bg-red-400/40 blur-sm"></div>
+                    </div>
+
+                    <svg id="crackBranches" class="absolute inset-0 w-full h-full pointer-events-none opacity-0" viewBox="0 0 320 192" preserveAspectRatio="none">
+                        <path class="crack-branch" d="M 0,96 Q 40,98 80,94 T 160,97 T 240,93 T 320,96" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="400" stroke-dashoffset="400"></path>
+                        <path class="crack-branch-small" d="M 80,94 L 88,78 L 92,68" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="50" stroke-dashoffset="50"></path>
+                        <path class="crack-branch-small" d="M 160,97 L 168,112 L 172,125" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="50" stroke-dashoffset="50"></path>
+                        <path class="crack-branch-small" d="M 240,93 L 252,80 L 258,70" fill="none" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="50" stroke-dashoffset="50"></path>
+                    </svg>
+
+                    <div id="waterContainer" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
+                    <div id="gasContainer" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
+                    <div id="ionContainer" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
+                    <div id="bacteriaContainer" class="absolute inset-0 pointer-events-none">
+                        <div class="bacterium bacteria-dormant absolute w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full" style="top: 46%; left: 6%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+                            <div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+                        </div>
+                        <div class="bacterium bacteria-dormant absolute w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" style="top: 53%; left: 20%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+                            <div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+                        </div>
+                        <div class="bacterium bacteria-dormant absolute w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full" style="top: 47%; left: 36%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+                            <div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+                        </div>
+                        <div class="bacterium bacteria-dormant absolute w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" style="top: 54%; left: 52%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+                            <div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+                        </div>
+                        <div class="bacterium bacteria-dormant absolute w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full" style="top: 46%; left: 68%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+                            <div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+                        </div>
+                        <div class="bacterium bacteria-dormant absolute w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" style="top: 52%; left: 84%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+                            <div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+                        </div>
+                    </div>
+                    <div id="crystalContainer" class="absolute inset-0 pointer-events-none"></div>
+                    <div id="sealOverlay" class="absolute top-1/2 left-0 w-full h-1 sm:h-1.5 -translate-y-1/2 opacity-0 rounded-full">
+                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 rounded-full"></div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-300 via-emerald-300 to-cyan-300 rounded-full blur-md"></div>
+                    </div>
+                    <div id="successMark" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 scale-0 transition-all duration-700">
+                        <div class="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-emerald-500/20 border-2 border-emerald-400 flex items-center justify-center backdrop-blur-sm">
+                            <svg class="w-5 h-5 sm:w-7 sm:h-7 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Elements - FIXED INSIDE -->
+                <div class="absolute top-4 sm:top-6 left-4 sm:left-6 font-mono text-[8px] sm:text-[10px] text-cyan-400/50 flex items-center gap-1.5 sm:gap-2">
+                    <div class="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-cyan-400/40 border border-cyan-400/50"></div>
+                    <span>CaCO₃ (方解石)</span>
+                </div>
+
+                <div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-30">
+                    <div id="statusBadge" class="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-black/80 border border-white/10 backdrop-blur-xl">
+                        <div id="statusDot" class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-neutral-500 transition-colors"></div>
+                        <span id="statusText" class="text-[8px] sm:text-[10px] font-medium text-neutral-300 transition-colors">準備開始</span>
+                        <div class="h-2 sm:h-3 w-px bg-white/10"></div>
+                        <span id="progressText" class="text-[8px] sm:text-[10px] font-mono text-neutral-500">0%</span>
+                    </div>
+                </div>
+
+                <!-- Tool Panels -->
+                <div class="glass-panel animate-float absolute left-4 top-4 w-10 rounded-xl p-1.5 hidden sm:flex flex-col gap-1.5 z-20">
+                    <button onclick="startSimulation()" title="Play" class="p-1.5 hover:bg-emerald-500/20 rounded-lg text-emerald-400 transition-all hover:scale-110">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                        </svg>
+                    </button>
+                    <button onclick="resetSimulation()" title="Reset" class="p-1.5 hover:bg-white/10 rounded-lg text-neutral-400 hover:text-white transition-all hover:scale-110">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="glass-panel animate-float-delayed absolute right-4 bottom-4 w-32 xs:w-36 sm:w-44 md:w-48 xl:w-52 rounded-lg sm:rounded-xl p-2 sm:p-3 z-20">
+                    <div class="flex items-center justify-between mb-2 sm:mb-3">
+                        <span class="text-[9px] sm:text-[10px] font-bold text-neutral-200 tracking-wider">即時參數</span>
+                        <div class="w-1 h-1 rounded-full bg-emerald-400 animate-pulse"></div>
+                    </div>
+                    <div class="space-y-2 sm:space-y-3">
+                        <div class="space-y-1 sm:space-y-1.5">
+                            <div class="flex justify-between text-[8px] sm:text-[9px] font-mono">
+                                <span class="text-neutral-500">pH 值</span>
+                                <span id="phValue" class="text-emerald-400">7.0</span>
+                            </div>
+                            <div class="h-1 bg-white/5 rounded-full overflow-hidden">
+                                <div id="phBar" class="h-full bg-emerald-500/50 transition-all duration-500" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1 sm:space-y-1.5">
+                            <div class="flex justify-between text-[8px] sm:text-[9px] font-mono">
+                                <span class="text-neutral-500">Ca²⁺ 濃度</span>
+                                <span id="calciumValue" class="text-cyan-400">0%</span>
+                            </div>
+                            <div class="h-1 bg-white/5 rounded-full overflow-hidden">
+                                <div id="calciumBar" class="h-full bg-cyan-500/50 transition-all duration-500" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1 sm:space-y-1.5">
+                            <div class="flex justify-between text-[8px] sm:text-[9px] font-mono">
+                                <span class="text-neutral-500">細菌</span>
+                                <span id="bacteriaValue" class="text-emerald-400">0%</span>
+                            </div>
+                            <div class="h-1 bg-white/5 rounded-full overflow-hidden">
+                                <div id="bacteriaBar" class="h-full bg-emerald-500/50 transition-all duration-500" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1 sm:space-y-1.5">
+                            <div class="flex justify-between text-[8px] sm:text-[9px] font-mono">
+                                <span class="text-neutral-500">S (IAP/Ksp)</span>
+                                <span id="supersatValue" class="text-cyan-400">1.0</span>
+                            </div>
+                            <div class="h-1 bg-white/5 rounded-full overflow-hidden">
+                                <div id="supersatBar" class="h-full bg-cyan-500/50 transition-all duration-500" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="space-y-1 sm:space-y-1.5">
+                            <div class="flex justify-between text-[8px] sm:text-[9px] font-mono">
+                                <span class="text-neutral-500">CaCO₃</span>
+                                <span id="crystalValue" class="text-amber-400">0%</span>
+                            </div>
+                            <div class="h-1 bg-white/5 rounded-full overflow-hidden">
+                                <div id="crystalBar" class="h-full bg-amber-500/50 transition-all duration-500" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Process Section -->
+<div class="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-20 md:py-32">
+    <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-10 sm:mb-16 md:mb-20">
+        <div class="max-w-2xl">
+            <h2 class="text-2xl xs:text-3xl sm:text-4xl font-bold mb-4 sm:mb-6 animate-on-scroll">自癒過程的科學機制</h2>
+            <p class="text-xs sm:text-sm md:text-base text-neutral-400 font-light animate-on-scroll" style="animation-delay: 100ms">
+                從應力集中到最終的裂縫封閉，MICP 技術模擬了自然界的成岩作用，使混凝土能夠在受損時自主反應。
+            </p>
+        </div>
+        <div class="font-mono text-[9px] sm:text-[10px] text-emerald-500/50 uppercase tracking-widest hidden md:block animate-on-scroll">
+            Research Workflow / 01-06
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+        <div id="stage1" class="stage-card glass-panel p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-white/5 hover:border-emerald-500/30 transition-all group animate-on-scroll" style="animation-delay: 200ms">
+            <div class="flex justify-between items-start mb-6 sm:mb-8">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 font-mono text-xs sm:text-sm">01</div>
+                <div class="text-[9px] sm:text-[10px] font-mono text-neutral-600 group-hover:text-red-400/50 transition-colors">應力階段</div>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">應力集中</h3>
+            <p class="text-[10px] sm:text-xs text-neutral-500 leading-relaxed">外部載重導致混凝土內部孔隙與 ITZ 界面產生應力集中因子 (Kt)。</p>
+        </div>
+        <div id="stage2" class="stage-card glass-panel p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-white/5 hover:border-orange-500/30 transition-all group animate-on-scroll" style="animation-delay: 300ms">
+            <div class="flex justify-between items-start mb-6 sm:mb-8">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-orange-500/10 border border-orange-500/20 flex items-center justify-center text-orange-400 font-mono text-xs sm:text-sm">02</div>
+                <div class="text-[9px] sm:text-[10px] font-mono text-neutral-600 group-hover:text-orange-400/50 transition-colors">裂縫階段</div>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">裂縫產生</h3>
+            <p class="text-[10px] sm:text-xs text-neutral-500 leading-relaxed">當拉應力超過抗拉強度，微裂縫開始萌生並在矩陣中傳播。</p>
+        </div>
+        <div id="stage3" class="stage-card glass-panel p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-white/5 hover:border-blue-500/30 transition-all group animate-on-scroll" style="animation-delay: 400ms">
+            <div class="flex justify-between items-start mb-6 sm:mb-8">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400 font-mono text-xs sm:text-sm">03</div>
+                <div class="text-[9px] sm:text-[10px] font-mono text-neutral-600 group-hover:text-blue-400/50 transition-colors">暴露階段</div>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">環境滲透</h3>
+            <p class="text-[10px] sm:text-xs text-neutral-500 leading-relaxed">水分、氧氣與二氧化碳經由裂縫進入，啟動內部的生化環境。</p>
+        </div>
+        <div id="stage4" class="stage-card glass-panel p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-white/5 hover:border-emerald-500/30 transition-all group animate-on-scroll" style="animation-delay: 500ms">
+            <div class="flex justify-between items-start mb-6 sm:mb-8">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-mono text-xs sm:text-sm">04</div>
+                <div class="text-[9px] sm:text-[10px] font-mono text-neutral-600 group-hover:text-emerald-400/50 transition-colors">活化階段</div>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">細菌活化</h3>
+            <p class="text-[10px] sm:text-xs text-neutral-500 leading-relaxed">休眠的芽孢桿菌接觸到水分與氧氣後甦醒，開始產生脲酶。</p>
+        </div>
+        <div id="stage5" class="stage-card glass-panel p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-white/5 hover:border-cyan-500/30 transition-all group animate-on-scroll" style="animation-delay: 600ms">
+            <div class="flex justify-between items-start mb-6 sm:mb-8">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 font-mono text-xs sm:text-sm">05</div>
+                <div class="text-[9px] sm:text-[10px] font-mono text-neutral-600 group-hover:text-cyan-400/50 transition-colors">結晶階段</div>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">碳酸鈣沉澱</h3>
+            <p class="text-[10px] sm:text-xs text-neutral-500 leading-relaxed">化學反應導致過飽和度增加，CaCO₃ 結晶在裂縫表面成核生長。</p>
+        </div>
+        <div id="stage6" class="stage-card glass-panel p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-white/5 hover:border-green-500/30 transition-all group animate-on-scroll" style="animation-delay: 700ms">
+            <div class="flex justify-between items-start mb-6 sm:mb-8">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-green-500/10 border border-green-500/20 flex items-center justify-center text-green-400 font-mono text-xs sm:text-sm">06</div>
+                <div class="text-[9px] sm:text-[10px] font-mono text-neutral-600 group-hover:text-green-400/50 transition-colors">修復完成</div>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold mb-2 sm:mb-3">自主封閉</h3>
+            <p class="text-[10px] sm:text-xs text-neutral-500 leading-relaxed">結晶體完全填滿裂縫空間，恢復結構的防水性與力學性能。</p>
+        </div>
+    </div>
+</div>
+
+<!-- Interactive Explainer Section -->
+<div class="w-full bg-neutral-950/50 border-y border-white/5 py-12 sm:py-20 md:py-32">
+    <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
+            <div class="relative animate-on-scroll">
+                <div class="glass-panel aspect-square sm:aspect-video lg:aspect-square rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 relative group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-cyan-500/5"></div>
+                    <div id="slideVisual" class="absolute inset-0 flex items-center justify-center p-8 sm:p-12"></div>
+                    <div class="absolute bottom-6 sm:bottom-8 left-6 sm:left-8 right-6 sm:right-8">
+                        <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                            <div class="h-px flex-1 bg-gradient-to-r from-emerald-500/50 to-transparent"></div>
+                            <span id="visualCaption" class="text-[9px] sm:text-[10px] font-mono text-emerald-400/60 uppercase tracking-widest">MICP: 生物學與土木工程的結合</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-6 sm:gap-8 animate-on-scroll" style="animation-delay: 200ms">
+                <div>
+                    <div id="slideLabel" class="text-[9px] sm:text-[10px] font-mono text-emerald-400 uppercase tracking-[0.3em] mb-3 sm:mb-4">技術簡介</div>
+                    <h2 id="slideTitle" class="text-3xl xs:text-4xl sm:text-5xl font-bold mb-3 sm:mb-4 tracking-tight">歡迎來到 MICP 技術</h2>
+                    <p id="slideSubtitle" class="text-base sm:text-lg text-neutral-300 font-medium">自癒混凝土概覽</p>
+                </div>
+                <div class="space-y-4 sm:space-y-6">
+                    <div id="slideNotes" class="text-xs sm:text-sm md:text-base text-neutral-400 leading-relaxed font-light"></div>
+                    <div id="slideTerms" class="flex flex-wrap gap-2 sm:gap-3"></div>
+                    <div id="slideNarration" class="hidden" aria-hidden="true"></div>
+                    <details id="slideNotesDetails" class="hidden">
+                        <summary>詳細說明</summary>
+                    </details>
+                    <div class="flex items-center gap-3 pt-2">
+                        <div class="h-1 flex-1 rounded-full bg-white/5 overflow-hidden">
+                            <div id="slideProgress" class="h-full w-0 rounded-full bg-emerald-500/60 transition-all duration-300"></div>
+                        </div>
+                        <span id="slideStatus" class="text-[9px] font-mono text-neutral-500">1 / 6</span>
+                    </div>
+                </div>
+                <div class="pt-6 sm:pt-8 border-t border-white/5 flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between">
+                    <div class="flex items-center gap-3 sm:gap-4">
+                        <button onclick="prevSlide()" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all" id="prevBtn">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+                        <div class="flex gap-1.5 sm:gap-2" id="slideDots"></div>
+                        <button onclick="nextSlide()" class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all" id="nextBtn">
+                            <svg class="w-4 h-4 sm:w-5 sm:h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button id="narrateBtn" onclick="toggleNarration()" class="px-4 sm:px-6 py-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] sm:text-xs font-medium hover:bg-emerald-500/20 transition-all flex items-center gap-2">
+                            <svg id="narratePlayIcon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path></svg>
+                            <svg id="narrateStopIcon" class="hidden w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 6h12v12H6z"></path></svg>
+                            <span id="narrateBtnText">播放旁白</span>
+                        </button>
+                        <div class="relative group/menu">
+                            <button type="button" class="w-10 h-10 rounded-xl border border-white/10 flex items-center justify-center hover:bg-white/5 transition-all" aria-label="語音設定">⚙</button>
+                            <div class="absolute bottom-full right-0 mb-3 w-56 glass-panel rounded-xl p-3 border border-white/10 opacity-0 invisible group-hover/menu:opacity-100 group-hover/menu:visible transition-all z-50">
+                                <div class="text-[9px] font-bold text-neutral-400 uppercase tracking-widest mb-3">語音設定</div>
+                                <label class="text-[8px] text-neutral-500 block mb-1">選擇語音</label>
+                                <select id="voiceSelect" onchange="updateSelectedVoice()" class="w-full bg-black/50 border border-white/10 rounded-lg px-2 py-1.5 text-[9px] text-neutral-300 mb-3"></select>
+                                <div class="flex justify-between mb-1"><label class="text-[8px] text-neutral-500">語速</label><span id="rateVal" class="text-[8px] text-emerald-400">1.0x</span></div>
+                                <input type="range" id="speechRate" min="0.5" max="2" step="0.1" value="1" onchange="updateSpeechRate()" class="w-full accent-emerald-500 mb-3">
+                                <label class="flex items-center justify-between text-[9px] text-neutral-300 mb-3">自動播放<input type="checkbox" id="autoPlayCheck" onchange="toggleAutoPlay()" class="w-4 h-4 accent-emerald-500"></label>
+                                <button id="testVoice" onclick="testVoice()" class="w-full py-2 rounded-lg bg-white/5 border border-white/10 text-[9px] text-neutral-400 hover:text-white hover:bg-white/10 transition-all">測試語音</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="w-full py-10 sm:py-16 border-t border-white/5">
+    <div class="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-8">
+        <div class="flex items-center gap-2 sm:gap-3">
+            <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-black font-bold text-xs sm:text-sm">G</div>
+            <span class="font-bold text-base sm:text-lg tracking-tight">GreenBuilt</span>
+        </div>
+        <div class="text-[9px] sm:text-[10px] text-neutral-600 font-mono">
+            © 2026 自癒混凝土中的 CaCO₃ 結晶生長｜研究計畫
+        </div>
+    </div>
+</footer>
