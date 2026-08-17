@@ -1,0 +1,685 @@
+<body class="bg-black text-white overflow-x-hidden noise-overlay">
+<!-- Hero Section -->
+<div class="min-h-screen grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-20 items-center">
+<!-- Left Content -->
+<div class="lg:col-span-5 flex flex-col gap-4 sm:gap-5 md:gap-6">
+<!-- Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 w-fit animate-on-scroll" style="animation-delay: 0ms; animation-play-state: running;">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+<span class="text-[9px] sm:text-[10px] uppercase text-emerald-300 tracking-widest font-mono font-medium">
+                    MICP Technology
+                </span>
+</div>
+<!-- Main Heading -->
+<h1 class="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl leading-[1.1] font-bold tracking-tight animate-on-scroll" style="animation-delay: 100ms; animation-play-state: running;">
+                Crystal Growth of
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 gradient-animated">
+                    CaCO₃
+                </span>
+                in
+                <br class="hidden sm:block"/>
+<span class="text-neutral-200">Self-Healing Concrete</span>
+</h1>
+<!-- Description -->
+<p class="text-xs sm:text-sm md:text-base text-neutral-400 font-light max-w-lg leading-relaxed animate-on-scroll" style="animation-delay: 200ms; animation-play-state: running;">
+                Exploring <strong class="text-neutral-300">Microbiologically Induced Calcium Carbonate Precipitation</strong> (MICP) &mdash; where <em>Bacillus</em> bacteria trigger biochemical reactions that produce calcite crystals, autonomously sealing cracks and restoring structural integrity.
+            </p>
+<!-- Key Info -->
+<div class="flex flex-wrap gap-2 sm:gap-3 animate-on-scroll" style="animation-delay: 250ms; animation-play-state: running;">
+<div class="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] sm:text-xs">
+<span class="text-emerald-400">🦠</span>
+<span class="text-neutral-400">Bacillus Bacteria</span>
+</div>
+<div class="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] sm:text-xs">
+<span class="text-cyan-400">💎</span>
+<span class="text-neutral-400">Calcite Crystals</span>
+</div>
+<div class="flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-white/5 border border-white/10 text-[10px] sm:text-xs">
+<span class="text-blue-400">💧</span>
+<span class="text-neutral-400">H₂O + O₂ Activation</span>
+</div>
+</div>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap gap-2 sm:gap-3 items-center animate-on-scroll" style="animation-delay: 300ms; animation-play-state: running;">
+<button class="group flex overflow-hidden uppercase transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.5)] text-[10px] xs:text-xs md:text-sm font-medium text-white tracking-widest rounded-full px-4 xs:px-6 md:px-10 py-2.5 xs:py-3 md:py-4 relative items-center justify-center" data-manus_click_id="1" data-manus_clickable="true" id="startBtn" onclick="startSimulation()">
+<!-- Border Beam -->
+<div class="absolute inset-0 -z-20 rounded-full overflow-hidden p-[1px]">
+<div class="absolute inset-[-100%] bg-[conic-gradient(from_0deg,transparent_0_300deg,#10b981_360deg)]" style="animation: beam-spin 3s linear infinite;"></div>
+<div class="absolute inset-[1px] rounded-full bg-black"></div>
+</div>
+<!-- Inner Background -->
+<div class="-z-10 overflow-hidden bg-zinc-950 rounded-full absolute inset-[2px]">
+<div class="absolute inset-0 bg-gradient-to-b from-zinc-800/60 to-transparent"></div>
+<div class="opacity-30 mix-blend-overlay absolute inset-0" style="background-image: radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 12px 12px; animation: dots-move 8s linear infinite"></div>
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 h-1/2 bg-emerald-500/10 blur-2xl rounded-full pointer-events-none transition-colors duration-500 group-hover:bg-emerald-500/30"></div>
+</div>
+<span class="relative z-10 text-white/90 transition-colors group-hover:text-white">
+                        Start Simulation
+                    </span>
+<svg class="w-3 h-3 sm:w-4 sm:h-4 ml-1.5 sm:ml-2 relative z-10 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<button class="flex items-center gap-1.5 sm:gap-2 px-3 xs:px-5 py-2.5 xs:py-3 md:py-4 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-all text-[10px] xs:text-xs md:text-sm text-neutral-300 hover:text-white" data-manus_click_id="2" data-manus_clickable="true" onclick="resetSimulation()">
+<svg class="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                    Reset
+                </button>
+</div>
+<!-- Chemical Equation -->
+<div class="mt-1 sm:mt-2 font-mono text-[9px] sm:text-[10px] md:text-xs text-neutral-500 animate-on-scroll" style="animation-delay: 400ms; animation-play-state: running;">
+<div class="flex flex-wrap items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-white/5 border border-white/5 w-fit">
+<span class="text-emerald-400">Bacteria</span>
+<span>+</span>
+<span class="text-cyan-400">Ca&sup2;⁺</span>
+<span>+</span>
+<span class="text-blue-400">CO₃&sup2;⁻</span>
+<span>&rarr;</span>
+<span class="text-amber-400 font-semibold">CaCO₃</span>
+<span class="text-neutral-600">&darr;</span>
+</div>
+</div>
+</div>
+<!-- Right Content - 3D Simulation Scene -->
+<div class="lg:col-span-7 h-[300px] xs:h-[350px] sm:h-[420px] md:h-[500px] lg:h-[550px] xl:h-[600px] 2xl:h-[700px] relative perspective-scene animate-on-scroll" style="animation-delay: 500ms; animation-play-state: running;">
+<div class="glass-panel overflow-hidden flex flex-col rotate-3d rounded-xl sm:rounded-2xl absolute inset-0 shadow-2xl shadow-emerald-500/5">
+<!-- Window Header -->
+<div class="flex bg-white/5 h-8 sm:h-10 border-b border-white/5 px-3 sm:px-4 backdrop-blur-md gap-2 items-center shrink-0">
+<div class="flex gap-1 sm:gap-1.5">
+<div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-red-500/60 hover:bg-red-500 transition-colors cursor-pointer"></div>
+<div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-yellow-500/60 hover:bg-yellow-500 transition-colors cursor-pointer"></div>
+<div class="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-green-500/60 hover:bg-green-500 transition-colors cursor-pointer"></div>
+</div>
+<div class="mx-auto font-mono text-[8px] sm:text-[10px] text-neutral-400 flex items-center gap-1.5 sm:gap-2">
+<span class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-500/60 animate-pulse"></span>
+                        micp-simulation.lab
+                    </div>
+<div class="text-[8px] sm:text-[9px] text-neutral-500 font-mono" id="simTime">00:00</div>
+</div>
+<!-- Main Visualization Area -->
+<div class="flex-1 overflow-hidden bg-gradient-to-br from-neutral-950 via-emerald-950/10 to-cyan-950/10 relative" id="simulationCanvas">
+<!-- Animated Grid Background -->
+<div class="absolute inset-0 opacity-25" style="background-image: linear-gradient(rgba(16,185,129,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.2) 1px, transparent 1px); background-size: 25px 25px; sm:background-size: 35px 35px;"></div>
+<!-- Radial Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/60"></div>
+<!-- Concrete Block -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] xs:w-56 sm:w-64 md:w-72 lg:w-80 xl:w-96 2xl:w-[450px] h-28 xs:h-32 sm:h-40 md:h-44 lg:h-48 xl:h-56 2xl:h-64 rounded-lg sm:rounded-xl overflow-hidden shadow-2xl" id="concreteBlock">
+<!-- Concrete Base -->
+<div class="absolute inset-0 concrete-texture"></div>
+<div class="absolute inset-0 border-2 border-gray-600/50 rounded-lg sm:rounded-xl"></div>
+<!-- Aggregate Particles (ITZ - Interfacial Transition Zone) -->
+<div class="absolute w-4 sm:w-6 h-3 sm:h-5 bg-gray-400/20 rounded-full blur-sm" style="top: 12%; left: 8%;"></div>
+<div class="absolute w-3 sm:w-5 h-2 sm:h-4 bg-gray-500/20 rounded-full blur-sm" style="top: 72%; left: 78%;"></div>
+<div class="absolute w-4 sm:w-6 h-2 sm:h-4 bg-gray-400/20 rounded-full blur-sm" style="top: 22%; left: 65%;"></div>
+<div class="absolute w-3 sm:w-4 h-2 sm:h-3 bg-gray-500/20 rounded-full blur-sm" style="top: 68%; left: 18%;"></div>
+<div class="absolute w-3 sm:w-5 h-2 sm:h-4 bg-gray-400/20 rounded-full blur-sm" style="top: 20%; left: 35%;"></div>
+<!-- Stress Indicators (Microcrack initiation points) -->
+<div class="absolute inset-0 pointer-events-none" id="stressIndicators">
+<div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 48%; left: 3%;"></div>
+<div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 51%; left: 18%;"></div>
+<div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 49%; left: 33%;"></div>
+<div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 50%; left: 50%;"></div>
+<div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 48%; left: 67%;"></div>
+<div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 51%; left: 82%;"></div>
+<div class="stress-point absolute w-2 h-2 sm:w-2.5 sm:h-2.5 bg-red-500 rounded-full opacity-0" style="top: 49%; left: 97%;"></div>
+</div>
+<!-- Main Crack Line -->
+<div class="absolute top-1/2 left-0 w-full h-0.5 -translate-y-1/2 opacity-0" id="crackLine" style="clip-path: inset(0 100% 0 0);">
+<div class="absolute inset-0 bg-gradient-to-r from-red-600 via-red-500 to-red-600"></div>
+<div class="absolute inset-0 bg-red-400/40 blur-sm"></div>
+</div>
+<!-- Crack Branches (SVG for complex paths) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-0" id="crackBranches" preserveaspectratio="none" viewbox="0 0 320 192">
+<path class="crack-branch" d="M 0,96 Q 40,98 80,94 T 160,97 T 240,93 T 320,96" fill="none" stroke="#dc2626" stroke-dasharray="400" stroke-dashoffset="400" stroke-width="2"></path>
+<path class="crack-branch-small" d="M 80,94 L 88,78 L 92,68" fill="none" stroke="#ef4444" stroke-dasharray="50" stroke-dashoffset="50" stroke-width="1.2"></path>
+<path class="crack-branch-small" d="M 160,97 L 168,112 L 172,125" fill="none" stroke="#ef4444" stroke-dasharray="50" stroke-dashoffset="50" stroke-width="1.2"></path>
+<path class="crack-branch-small" d="M 240,93 L 252,80 L 258,70" fill="none" stroke="#ef4444" stroke-dasharray="50" stroke-dashoffset="50" stroke-width="1.2"></path>
+</svg>
+<!-- Water Droplets Container -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden" id="waterContainer"></div>
+<!-- Oxygen & CO2 Container -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden" id="gasContainer"></div>
+<!-- Ca²⁺ Ions Container -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden" id="ionContainer"></div>
+<!-- Bacteria Container -->
+<div class="absolute inset-0 pointer-events-none" id="bacteriaContainer">
+<div class="bacterium bacteria-dormant absolute w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full" style="top: 46%; left: 6%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+<div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+</div>
+<div class="bacterium bacteria-dormant absolute w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" style="top: 53%; left: 20%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+<div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+</div>
+<div class="bacterium bacteria-dormant absolute w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full" style="top: 47%; left: 36%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+<div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+</div>
+<div class="bacterium bacteria-dormant absolute w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" style="top: 54%; left: 52%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+<div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+</div>
+<div class="bacterium bacteria-dormant absolute w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full" style="top: 46%; left: 68%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+<div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+</div>
+<div class="bacterium bacteria-dormant absolute w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" style="top: 52%; left: 84%; background: radial-gradient(circle at 30% 30%, #4ade80, #16a34a);">
+<div class="absolute inset-0.5 rounded-full bg-emerald-300/20"></div>
+</div>
+</div>
+<!-- Crystal Container -->
+<div class="absolute inset-0 pointer-events-none" id="crystalContainer"></div>
+<!-- Seal Overlay -->
+<div class="absolute top-1/2 left-0 w-full h-1 sm:h-1.5 -translate-y-1/2 opacity-0 rounded-full" id="sealOverlay">
+<div class="absolute inset-0 bg-gradient-to-r from-cyan-400 via-emerald-400 to-cyan-400 rounded-full"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-cyan-300 via-emerald-300 to-cyan-300 rounded-full blur-md"></div>
+</div>
+<!-- Success Checkmark -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 scale-0 transition-all duration-700" id="successMark">
+<div class="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-emerald-500/20 border-2 border-emerald-400 flex items-center justify-center backdrop-blur-sm">
+<svg class="w-5 h-5 sm:w-7 sm:h-7 text-emerald-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Floating Molecule Structure (CaCO3 crystal lattice) - Hidden on small screens -->
+<div class="absolute top-8 sm:top-12 right-8 sm:right-12 w-14 h-14 sm:w-20 sm:h-20 animate-spin-slow opacity-50 hidden xs:block">
+<div class="absolute inset-0 border border-cyan-500/40 rounded-lg" style="transform: rotateY(0deg) translateZ(1.5rem); sm:transform: rotateY(0deg) translateZ(2.5rem);"></div>
+<div class="absolute inset-0 border border-cyan-500/40 rounded-lg" style="transform: rotateY(90deg) translateZ(1.5rem); sm:transform: rotateY(90deg) translateZ(2.5rem);"></div>
+<div class="absolute inset-0 border border-cyan-500/40 rounded-lg" style="transform: rotateX(90deg) translateZ(1.5rem); sm:transform: rotateX(90deg) translateZ(2.5rem);"></div>
+<div class="absolute top-1/2 left-1/2 w-6 h-6 sm:w-8 sm:h-8 -translate-x-1/2 -translate-y-1/2 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
+</div>
+<!-- Labels - Hidden on very small screens -->
+<div class="absolute top-4 sm:top-6 left-4 sm:left-6 font-mono text-[8px] sm:text-[10px] text-cyan-400/50 hidden xs:flex items-center gap-1.5 sm:gap-2">
+<div class="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-cyan-400/40 border border-cyan-400/50"></div>
+<span>CaCO₃ (Calcite)</span>
+</div>
+<!-- Status Indicator -->
+<div class="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 z-30">
+<div class="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full bg-black/80 border border-white/10 backdrop-blur-xl" id="statusBadge">
+<div class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-neutral-500 transition-colors" id="statusDot"></div>
+<span class="text-[8px] sm:text-[10px] font-medium text-neutral-300 transition-colors" id="statusText">Ready to Start</span>
+<div class="h-2 sm:h-3 w-px bg-white/10"></div>
+<span class="text-[8px] sm:text-[10px] font-mono text-neutral-500" id="progressText">0%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Tool Panel - Hidden on mobile -->
+<div class="glass-panel animate-float absolute -left-3 md:-left-5 top-14 w-10 rounded-xl p-1.5 hidden sm:flex flex-col gap-1.5 z-10">
+<button class="p-1.5 hover:bg-emerald-500/20 rounded-lg text-emerald-400 transition-all hover:scale-110" data-manus_click_id="3" data-manus_clickable="true" onclick="startSimulation()" title="Play">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<button class="p-1.5 hover:bg-white/10 rounded-lg text-neutral-400 hover:text-white transition-all hover:scale-110" data-manus_click_id="4" data-manus_clickable="true" onclick="resetSimulation()" title="Reset">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Floating Parameters Panel -->
+<div class="glass-panel animate-float-delayed absolute right-1 sm:-right-2 md:-right-3 bottom-2 sm:bottom-6 w-32 xs:w-36 sm:w-44 md:w-48 xl:w-52 rounded-lg sm:rounded-xl p-2 sm:p-3 z-10" style="animation-delay: 1s">
+<div class="flex justify-between items-center mb-2 sm:mb-3">
+<span class="text-[8px] sm:text-[9px] font-bold uppercase tracking-wider text-neutral-400">
+                        Live Parameters
+                    </span>
+<div class="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-emerald-500 animate-pulse"></div>
+</div>
+<div class="space-y-2 sm:space-y-2.5">
+<!-- pH Level -->
+<div class="space-y-0.5 sm:space-y-1">
+<div class="flex justify-between text-[9px] sm:text-[10px]">
+<span class="text-neutral-500">pH Level</span>
+<span class="text-neutral-300 font-mono" id="phValue">7.0</span>
+</div>
+<div class="h-0.5 sm:h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full w-[50%] bg-gradient-to-r from-yellow-500 via-emerald-500 to-cyan-500 rounded-full transition-all duration-700" id="phBar"></div>
+</div>
+</div>
+<!-- Calcium Concentration -->
+<div class="space-y-0.5 sm:space-y-1">
+<div class="flex justify-between text-[9px] sm:text-[10px]">
+<span class="text-neutral-500">Ca&sup2;⁺ Conc.</span>
+<span class="text-neutral-300 font-mono" id="calciumValue">0%</span>
+</div>
+<div class="h-0.5 sm:h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full w-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full transition-all duration-700" id="calciumBar"></div>
+</div>
+</div>
+<!-- Bacterial Activity -->
+<div class="space-y-0.5 sm:space-y-1">
+<div class="flex justify-between text-[9px] sm:text-[10px]">
+<span class="text-neutral-500">Bacteria</span>
+<span class="text-neutral-300 font-mono" id="bacteriaValue">0%</span>
+</div>
+<div class="h-0.5 sm:h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full w-0 bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full transition-all duration-700" id="bacteriaBar"></div>
+</div>
+</div>
+<!-- Supersaturation -->
+<div class="space-y-0.5 sm:space-y-1">
+<div class="flex justify-between text-[9px] sm:text-[10px]">
+<span class="text-neutral-500">S (IAP/Ksp)</span>
+<span class="text-neutral-300 font-mono" id="supersatValue">1.0</span>
+</div>
+<div class="h-0.5 sm:h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full w-0 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full transition-all duration-700" id="supersatBar"></div>
+</div>
+</div>
+<!-- Crystal Formation -->
+<div class="space-y-0.5 sm:space-y-1">
+<div class="flex justify-between text-[9px] sm:text-[10px]">
+<span class="text-neutral-500">CaCO₃</span>
+<span class="text-neutral-300 font-mono" id="crystalValue">0%</span>
+</div>
+<div class="h-0.5 sm:h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full w-0 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full transition-all duration-700" id="crystalBar"></div>
+</div>
+</div>
+</div>
+<!-- Legend - Hidden on very small screens -->
+<div class="hidden xs:flex gap-2 mt-2 sm:mt-3 pt-2 border-t border-white/10">
+<div class="flex items-center gap-1">
+<div class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-500/60"></div>
+<span class="text-[7px] sm:text-[8px] text-neutral-500">Bacteria</span>
+</div>
+<div class="flex items-center gap-1">
+<div class="w-1.5 h-1.5 sm:w-2 sm:h-2 rotate-45 bg-cyan-500/60"></div>
+<span class="text-[7px] sm:text-[8px] text-neutral-500">Calcite</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Process Stages Section -->
+<div class="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
+<div class="text-center mb-6 sm:mb-8 animate-on-scroll" style="animation-play-state: paused;">
+<span class="text-emerald-400 text-[10px] sm:text-xs font-mono uppercase tracking-widest">MICP Process</span>
+<h2 class="text-xl sm:text-2xl md:text-3xl font-bold mt-1.5 sm:mt-2 mb-1.5 sm:mb-2">The Self-Healing Mechanism</h2>
+<p class="text-neutral-400 text-xs sm:text-sm max-w-xl mx-auto">Watch how CaCO₃ crystals autonomously seal concrete cracks through microbiological precipitation.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3">
+<!-- Stage 1: Stress -->
+<div class="stage-card glass-panel rounded-lg sm:rounded-xl p-2 sm:p-3 text-center transition-all hover:scale-105 animate-on-scroll border border-transparent" id="stage1" style="animation-delay: 100ms; animation-play-state: paused;">
+<div class="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-1.5 sm:mb-2 rounded-full bg-red-500/20 flex items-center justify-center">
+<svg class="w-3 h-3 sm:w-4 sm:h-4 text-red-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-[10px] sm:text-xs font-semibold mb-0.5">Stress</h3>
+<p class="text-[8px] sm:text-[9px] text-neutral-500 leading-tight">Load causes internal stress concentration (Kt)</p>
+</div>
+<!-- Stage 2: Crack -->
+<div class="stage-card glass-panel rounded-lg sm:rounded-xl p-2 sm:p-3 text-center transition-all hover:scale-105 animate-on-scroll border border-transparent" id="stage2" style="animation-delay: 150ms; animation-play-state: paused;">
+<div class="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-1.5 sm:mb-2 rounded-full bg-orange-500/20 flex items-center justify-center">
+<svg class="w-3 h-3 sm:w-4 sm:h-4 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-[10px] sm:text-xs font-semibold mb-0.5">Crack</h3>
+<p class="text-[8px] sm:text-[9px] text-neutral-500 leading-tight">Microcrack initiation at ITZ &amp; propagation</p>
+</div>
+<!-- Stage 3: H2O + O2 -->
+<div class="stage-card glass-panel rounded-lg sm:rounded-xl p-2 sm:p-3 text-center transition-all hover:scale-105 animate-on-scroll border border-transparent" id="stage3" style="animation-delay: 200ms; animation-play-state: paused;">
+<div class="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-1.5 sm:mb-2 rounded-full bg-blue-500/20 flex items-center justify-center">
+<svg class="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-[10px] sm:text-xs font-semibold mb-0.5">H₂O + O₂</h3>
+<p class="text-[8px] sm:text-[9px] text-neutral-500 leading-tight">Moisture penetration &amp; CO₂ dissolution</p>
+</div>
+<!-- Stage 4: Bacteria -->
+<div class="stage-card glass-panel rounded-lg sm:rounded-xl p-2 sm:p-3 text-center transition-all hover:scale-105 animate-on-scroll border border-transparent" id="stage4" style="animation-delay: 250ms; animation-play-state: paused;">
+<div class="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-1.5 sm:mb-2 rounded-full bg-emerald-500/20 flex items-center justify-center">
+<svg class="w-3 h-3 sm:w-4 sm:h-4 text-emerald-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-[10px] sm:text-xs font-semibold mb-0.5">Activation</h3>
+<p class="text-[8px] sm:text-[9px] text-neutral-500 leading-tight">Bacillus bacteria awaken &amp; metabolize</p>
+</div>
+<!-- Stage 5: Crystals -->
+<div class="stage-card glass-panel rounded-lg sm:rounded-xl p-2 sm:p-3 text-center transition-all hover:scale-105 animate-on-scroll border border-transparent" id="stage5" style="animation-delay: 300ms; animation-play-state: paused;">
+<div class="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-1.5 sm:mb-2 rounded-full bg-cyan-500/20 flex items-center justify-center">
+<svg class="w-3 h-3 sm:w-4 sm:h-4 text-cyan-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-[10px] sm:text-xs font-semibold mb-0.5">Nucleation</h3>
+<p class="text-[8px] sm:text-[9px] text-neutral-500 leading-tight">CaCO₃ heterogeneous nucleation (S&gt;1)</p>
+</div>
+<!-- Stage 6: Sealed -->
+<div class="stage-card glass-panel rounded-lg sm:rounded-xl p-2 sm:p-3 text-center transition-all hover:scale-105 animate-on-scroll border border-transparent" id="stage6" style="animation-delay: 350ms; animation-play-state: paused;">
+<div class="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-1.5 sm:mb-2 rounded-full bg-green-500/20 flex items-center justify-center">
+<svg class="w-3 h-3 sm:w-4 sm:h-4 text-green-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-[10px] sm:text-xs font-semibold mb-0.5">Sealed</h3>
+<p class="text-[8px] sm:text-[9px] text-neutral-500 leading-tight">Crystal growth fills crack completely</p>
+</div>
+</div>
+</div>
+<!-- Interactive Explainer Section -->
+<div class="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-20 border-t border-white/5">
+<div class="text-center mb-6 sm:mb-8 animate-on-scroll" style="animation-play-state: paused;">
+<span class="text-cyan-400 text-[10px] sm:text-xs font-mono uppercase tracking-widest">Interactive Guide</span>
+<h2 class="text-xl sm:text-2xl md:text-3xl font-bold mt-1.5 sm:mt-2 mb-1.5 sm:mb-2">Understanding the MICP Process</h2>
+<p class="text-neutral-400 text-xs sm:text-sm max-w-xl mx-auto">Step through each stage of self-healing concrete with narration and detailed notes.</p>
+</div>
+<!-- Interactive Slideshow -->
+<div class="max-w-5xl 2xl:max-w-6xl mx-auto">
+<div class="glass-panel rounded-xl sm:rounded-2xl overflow-hidden animate-on-scroll" style="animation-play-state: paused;">
+<!-- Slideshow Header with Stage Navigation -->
+<div class="bg-white/5 px-3 sm:px-4 md:px-6 py-2 sm:py-3 border-b border-white/10">
+<div class="flex items-center justify-between">
+<!-- Stage Tabs -->
+<div class="flex items-center gap-1 overflow-x-auto pb-1 hide-scrollbar">
+<button class="slide-tab flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2 md:px-3 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] md:text-xs font-medium transition-all whitespace-nowrap active bg-white/10 text-white" data-slide="0" onclick="goToSlide(0)">
+<span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-[8px] sm:text-[9px] text-white font-bold">i</span>
+<span class="hidden sm:inline">Intro</span>
+</button>
+<button class="slide-tab flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2 md:px-3 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] md:text-xs font-medium transition-all whitespace-nowrap text-neutral-500" data-slide="1" onclick="goToSlide(1)">
+<span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-red-500/20 text-red-400 flex items-center justify-center text-[8px] sm:text-[9px] font-bold">1</span>
+<span class="hidden sm:inline">Stress</span>
+</button>
+<button class="slide-tab flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2 md:px-3 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] md:text-xs font-medium transition-all whitespace-nowrap text-neutral-500" data-slide="2" onclick="goToSlide(2)">
+<span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center text-[8px] sm:text-[9px] font-bold">2</span>
+<span class="hidden sm:inline">Crack</span>
+</button>
+<button class="slide-tab flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2 md:px-3 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] md:text-xs font-medium transition-all whitespace-nowrap text-neutral-500" data-slide="3" onclick="goToSlide(3)">
+<span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center text-[8px] sm:text-[9px] font-bold">3</span>
+<span class="hidden sm:inline">H₂O+O₂</span>
+</button>
+<button class="slide-tab flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2 md:px-3 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] md:text-xs font-medium transition-all whitespace-nowrap text-neutral-500" data-slide="4" onclick="goToSlide(4)">
+<span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-[8px] sm:text-[9px] font-bold">4</span>
+<span class="hidden sm:inline">Bacteria</span>
+</button>
+<button class="slide-tab flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2 md:px-3 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] md:text-xs font-medium transition-all whitespace-nowrap text-neutral-500" data-slide="5" onclick="goToSlide(5)">
+<span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-[8px] sm:text-[9px] font-bold">5</span>
+<span class="hidden sm:inline">Crystals</span>
+</button>
+<button class="slide-tab flex items-center gap-1 sm:gap-1.5 px-1.5 sm:px-2 md:px-3 py-1 sm:py-1.5 rounded-lg text-[9px] sm:text-[10px] md:text-xs font-medium transition-all whitespace-nowrap text-neutral-500" data-slide="6" onclick="goToSlide(6)">
+<span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-green-500/20 text-green-400 flex items-center justify-center text-[8px] sm:text-[9px] font-bold">6</span>
+<span class="hidden sm:inline">Sealed</span>
+</button>
+</div>
+<!-- Status -->
+<div class="text-[9px] sm:text-[10px] text-neutral-500 font-mono ml-2 shrink-0" id="slideStatus">1 / 7</div>
+</div>
+</div>
+<!-- Main Slideshow Content -->
+<div class="grid md:grid-cols-2 min-h-[350px] xs:min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[550px]">
+<!-- Left: Visual/Animation Panel -->
+<div class="bg-gradient-to-br from-neutral-900 via-neutral-900 to-neutral-800 p-4 sm:p-6 md:p-8 flex flex-col justify-center items-center relative overflow-hidden border-b md:border-b-0 md:border-r border-white/5 min-h-[180px] xs:min-h-[200px] sm:min-h-[250px]">
+<!-- Animated Background Grid -->
+<div class="absolute inset-0 opacity-20" style="background-image: linear-gradient(rgba(16,185,129,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.1) 1px, transparent 1px); background-size: 20px 20px; sm:background-size: 30px 30px;"></div>
+<!-- Slide Visuals Container -->
+<div class="relative z-10 w-full max-w-xs sm:max-w-sm" id="slideVisual">
+<div class="text-center">
+<div class="relative inline-block">
+<div class="w-32 h-32 sm:w-48 sm:h-48 mx-auto relative">
+<div class="absolute inset-0 rounded-full border-2 border-emerald-500/30 animate-spin-slow"></div>
+<div class="absolute inset-3 sm:inset-4 rounded-full border-2 border-cyan-500/30 animate-spin-slow" style="animation-direction: reverse;"></div>
+<div class="absolute inset-6 sm:inset-8 rounded-full border-2 border-emerald-500/20 animate-spin-slow"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-14 h-14 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 border border-emerald-500/40 flex items-center justify-center">
+<span class="text-2xl sm:text-4xl">🦠</span>
+</div>
+</div>
+<div class="absolute top-1 sm:top-2 left-1/2 -translate-x-1/2 w-4 h-4 sm:w-6 sm:h-6 rounded bg-cyan-500/40 rotate-45 animate-pulse"></div>
+<div class="absolute bottom-1 sm:bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 sm:w-5 sm:h-5 rounded bg-emerald-500/40 rotate-45 animate-pulse" style="animation-delay: 0.5s;"></div>
+</div>
+</div>
+<div class="mt-4 sm:mt-6 text-sm sm:text-lg font-semibold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400">Self-Healing Concrete</div>
+</div>
+</div>
+<!-- Visual Caption -->
+<div class="mt-3 sm:mt-4 text-center text-[10px] sm:text-xs text-neutral-500 font-mono" id="visualCaption">MICP: Biology meets Civil Engineering</div>
+</div>
+<!-- Right: Content Panel -->
+<div class="p-4 sm:p-6 md:p-8 flex flex-col">
+<!-- Stage Header -->
+<div class="mb-3 sm:mb-4">
+<div class="text-[10px] sm:text-xs font-mono text-emerald-400 mb-0.5 sm:mb-1" id="slideLabel">INTRODUCTION</div>
+<h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2" id="slideTitle">Welcome to MICP Technology</h3>
+<p class="text-xs sm:text-sm text-neutral-400" id="slideSubtitle">Self-healing concrete overview</p>
+</div>
+<!-- Narration Text -->
+<div class="flex-1 mb-4 sm:mb-6">
+<div class="text-xs sm:text-sm text-neutral-300 leading-relaxed" id="slideNarration">Welcome to this interactive guide on Microbiologically Induced Calcium Carbonate Precipitation, or MICP, in self-healing concrete. This revolutionary technology allows concrete structures to autonomously repair cracks using bacteria and biochemical reactions. Let's explore each stage of this fascinating process.</div>
+</div>
+<!-- Expandable Notes -->
+<details class="mb-4 sm:mb-6 glass-panel rounded-lg sm:rounded-xl bg-black/20" id="slideNotesDetails">
+<summary class="cursor-pointer px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between text-xs sm:text-sm font-medium text-neutral-300 hover:text-white transition-colors">
+<span class="flex items-center gap-1.5 sm:gap-2">
+<svg class="w-3 h-3 sm:w-4 sm:h-4 text-cyan-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                                    Scientific Notes
+                                </span>
+<svg class="w-3 h-3 sm:w-4 sm:h-4 transition-transform" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</summary>
+<div class="px-3 sm:px-4 pb-3 sm:pb-4 text-xs sm:text-sm text-neutral-400 leading-relaxed" id="slideNotes">
+<p class="mb-2"><strong class="text-emerald-400">MICP</strong> stands for Microbiologically Induced Calcium Carbonate Precipitation &mdash; a bio-based self-healing technology.</p>
+<p class="mb-2">Bacteria like <em>Bacillus</em> and <em>Lactococcus</em> are incorporated into the concrete mix, remaining dormant until cracks form.</p>
+<p>When activated by moisture and oxygen, they produce <strong class="text-cyan-400">CaCO₃ (calcite)</strong> crystals that seal cracks autonomously.</p>
+</div>
+</details>
+<!-- Key Terms -->
+<div class="mb-4 sm:mb-6">
+<div class="text-[9px] sm:text-[10px] font-semibold text-neutral-500 uppercase tracking-wider mb-1.5 sm:mb-2">Key Terms</div>
+<div class="flex flex-wrap gap-1.5 sm:gap-2" id="slideTerms"><span class="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded bg-emerald-500/10 text-emerald-400 text-[9px] sm:text-[10px] font-mono">MICP</span><span class="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded bg-cyan-500/10 text-cyan-400 text-[9px] sm:text-[10px] font-mono">CaCO₃</span><span class="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded bg-blue-500/10 text-blue-400 text-[9px] sm:text-[10px] font-mono">Bacillus</span><span class="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded bg-purple-500/10 text-purple-400 text-[9px] sm:text-[10px] font-mono">Calcite</span></div>
+</div>
+<!-- Controls -->
+<div class="flex flex-col gap-3 sm:gap-4 pt-3 sm:pt-4 border-t border-white/10">
+<!-- Navigation Row -->
+<div class="flex flex-wrap items-center justify-between gap-2">
+<!-- Left Controls -->
+<div class="flex items-center gap-1.5 sm:gap-2">
+<button class="p-1.5 sm:p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all text-neutral-400 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed" disabled="" id="prevBtn" onclick="prevSlide()">
+<svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<button class="p-1.5 sm:p-2 rounded-lg bg-white/5 hover:bg-white/10 transition-all text-neutral-400 hover:text-white" id="nextBtn" onclick="nextSlide()">
+<svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<!-- Center: Play/Pause with Narration -->
+<div class="flex items-center gap-2 sm:gap-3 order-last sm:order-none w-full sm:w-auto justify-center mt-2 sm:mt-0">
+<button class="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 hover:border-emerald-500/50 transition-all text-xs sm:text-sm text-emerald-400 hover:text-emerald-300" id="narrateBtn" onclick="toggleNarration()">
+<svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" id="narratePlayIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 hidden" fill="none" id="narrateStopIcon" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<path d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span id="narrateBtnText">Narrate</span>
+</button>
+<!-- Auto-play toggle -->
+<label class="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-neutral-500 cursor-pointer">
+<input class="w-3 h-3 rounded bg-white/10 border-white/20 text-emerald-500 focus:ring-emerald-500/50" id="autoPlayCheck" onchange="toggleAutoPlay()" type="checkbox"/>
+                                        Auto
+                                    </label>
+</div>
+<!-- Right: Speed Control -->
+<div class="flex items-center gap-1.5 sm:gap-2">
+<label class="text-[9px] sm:text-[10px] text-neutral-500 hidden xs:inline">Speed:</label>
+<select class="bg-white/5 border border-white/10 rounded px-1.5 sm:px-2 py-1 text-[10px] sm:text-xs text-neutral-300 focus:outline-none focus:border-emerald-500/50" id="speechRate" onchange="updateSpeechRate()">
+<option value="0.8">0.8x</option>
+<option value="0.9">0.9x</option>
+<option selected="" value="1">1x</option>
+<option value="1.1">1.1x</option>
+<option value="1.2">1.2x</option>
+</select>
+</div>
+</div>
+<!-- Voice Settings Row -->
+<div class="flex flex-col xs:flex-row items-stretch xs:items-center justify-between gap-2 sm:gap-4 p-2 sm:p-3 rounded-lg bg-white/5">
+<div class="flex items-center gap-1.5 sm:gap-2">
+<svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-neutral-500 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="text-[9px] sm:text-[10px] text-neutral-400">Voice:</span>
+</div>
+<div class="flex items-center gap-2 flex-1">
+<select class="flex-1 min-w-0 bg-white/5 border border-white/10 rounded px-2 py-1 sm:py-1.5 text-[10px] sm:text-xs text-neutral-300 focus:outline-none focus:border-emerald-500/50 truncate" id="voiceSelect" onchange="updateSelectedVoice()"><optgroup label="⭐ Recommended"><option value="Google US English">🌟 Google US English</option><option value="Google UK English Female">🌟 Google UK English Female</option><option value="Google UK English Male">🌟 Google UK English Male</option><option value="Microsoft Mark - English (United States)">✨ Microsoft Mark - English (United States)</option><option value="Microsoft Zira - English (United States)">✨ Microsoft Zira - English (United States)</option><option value="Microsoft David - English (United States)">✨ Microsoft David - English (United States)</option></optgroup></select>
+<button class="px-2 sm:px-3 py-1 sm:py-1.5 rounded bg-white/5 hover:bg-white/10 text-[9px] sm:text-[10px] text-neutral-400 hover:text-white transition-all shrink-0" onclick="testVoice()">
+                                        Test
+                                    </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="h-0.5 sm:h-1 bg-white/5">
+<div class="h-full bg-gradient-to-r from-emerald-500 to-cyan-500 transition-all duration-500" id="slideProgress" style="width: 14.2857%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Key Equations Section -->
+<div class="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 border-t border-white/5">
+<div class="glass-panel rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 animate-on-scroll" style="animation-play-state: paused;">
+<h3 class="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-center">Key Scientific Parameters</h3>
+<div class="grid grid-cols-1 xs:grid-cols-3 gap-4 sm:gap-6">
+<div class="text-center">
+<div class="font-mono text-sm sm:text-lg text-cyan-400 mb-0.5 sm:mb-1">S = IAP / K<sub>sp</sub></div>
+<div class="text-[10px] sm:text-xs text-neutral-400">Supersaturation Ratio</div>
+<div class="text-[9px] sm:text-[10px] text-neutral-500 mt-0.5 sm:mt-1">S &gt; 1 &rarr; CaCO₃ precipitates</div>
+</div>
+<div class="text-center">
+<div class="font-mono text-sm sm:text-lg text-emerald-400 mb-0.5 sm:mb-1">K<sub>sp</sub> &asymp; 3.3 &times; 10<sup>-9</sup></div>
+<div class="text-[10px] sm:text-xs text-neutral-400">Calcite Solubility Product (25&deg;C)</div>
+<div class="text-[9px] sm:text-[10px] text-neutral-500 mt-0.5 sm:mt-1">Threshold for precipitation</div>
+</div>
+<div class="text-center">
+<div class="font-mono text-sm sm:text-lg text-purple-400 mb-0.5 sm:mb-1">pH 12.5 - 13.5</div>
+<div class="text-[10px] sm:text-xs text-neutral-400">Optimal Concrete pH</div>
+<div class="text-[9px] sm:text-[10px] text-neutral-500 mt-0.5 sm:mt-1">Stabilizes CO₃&sup2;⁻ ions</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Benefits Section -->
+<div class="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
+<div class="grid grid-cols-1 xs:grid-cols-3 gap-4 sm:gap-6">
+<div class="animate-on-scroll" style="animation-delay: 100ms; animation-play-state: paused;">
+<div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-emerald-500/20 flex items-center justify-center mb-2 sm:mb-3">
+<svg class="w-4 h-4 sm:w-5 sm:h-5 text-emerald-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-sm sm:text-base font-semibold mb-0.5 sm:mb-1">Environmentally Friendly</h3>
+<p class="text-neutral-400 text-[10px] sm:text-xs leading-relaxed">MICP uses natural biological processes, reducing synthetic repair materials and lowering carbon footprint.</p>
+</div>
+<div class="animate-on-scroll" style="animation-delay: 200ms; animation-play-state: paused;">
+<div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-cyan-500/20 flex items-center justify-center mb-2 sm:mb-3">
+<svg class="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-sm sm:text-base font-semibold mb-0.5 sm:mb-1">Cost Effective</h3>
+<p class="text-neutral-400 text-[10px] sm:text-xs leading-relaxed">Autonomous repair eliminates expensive manual interventions, reducing maintenance costs by up to 60%.</p>
+</div>
+<div class="animate-on-scroll" style="animation-delay: 300ms; animation-play-state: paused;">
+<div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-amber-500/20 flex items-center justify-center mb-2 sm:mb-3">
+<svg class="w-4 h-4 sm:w-5 sm:h-5 text-amber-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<h3 class="text-sm sm:text-base font-semibold mb-0.5 sm:mb-1">Extended Lifespan</h3>
+<p class="text-neutral-400 text-[10px] sm:text-xs leading-relaxed">Self-healing extends concrete structure lifespan by 50+ years, improving infrastructure resilience.</p>
+</div>
+</div>
+</div>
+<!-- About the Researcher Section -->
+<div class="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 py-10 sm:py-16 md:py-24 border-t border-white/5">
+<div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+<!-- Photo Side -->
+<!-- Info Side -->
+<div class="animate-on-scroll" style="animation-delay: 200ms; animation-play-state: paused;">
+<span class="text-red-400 text-[10px] sm:text-xs font-mono uppercase tracking-widest">About</span>
+<div class="space-y-3 sm:space-y-4 text-xs sm:text-sm text-neutral-400 leading-relaxed mt-2">
+<p>
+                        This research project explores the fascinating intersection of <strong class="text-neutral-200">microbiology</strong> and <strong class="text-neutral-200">civil engineering</strong>, investigating how bacterial processes can be harnessed to create self-healing concrete structures.
+                    </p>
+<p>
+                        The study focuses on <strong class="text-emerald-400">Microbiologically Induced Calcium Carbonate Precipitation (MICP)</strong> &mdash; a sustainable approach to autonomous crack repair that could revolutionize infrastructure maintenance and extend the lifespan of concrete structures by decades.
+                    </p>
+</div>
+<!-- Research Focus Tags -->
+<div class="flex flex-wrap gap-1.5 sm:gap-2 mt-4 sm:mt-6">
+<span class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-red-500/10 text-red-400 text-[10px] sm:text-xs border border-red-500/20">Materials Science</span>
+<span class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] sm:text-xs border border-emerald-500/20">Microbiology</span>
+<span class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-cyan-500/10 text-cyan-400 text-[10px] sm:text-xs border border-cyan-500/20">Crystal Growth</span>
+<span class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-amber-500/10 text-amber-400 text-[10px] sm:text-xs border border-amber-500/20">Sustainable Construction</span>
+</div>
+<!-- University Info -->
+<div class="mt-6 sm:mt-8 p-3 sm:p-4 rounded-lg sm:rounded-xl bg-white/5 border border-white/10">
+<div class="flex items-center gap-3 sm:gap-4">
+<img alt="CUA Logo" class="h-10 w-10 sm:h-12 sm:w-12 object-contain shrink-0" src="CUA.png"/>
+<div>
+<div class="font-semibold text-sm sm:text-base text-neutral-200">The Catholic University of America</div>
+<div class="text-[10px] sm:text-xs text-neutral-500">Washington, D.C.</div>
+</div>
+</div>
+</div>
+<!-- Contact -->
+<div class="mt-4 sm:mt-6 flex flex-wrap gap-2 sm:gap-3">
+<a class="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs sm:text-sm text-neutral-300 hover:text-white" href="mailto:anyona274@gmail.com">
+<svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+                        Email
+                    </a>
+<a class="flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs sm:text-sm text-neutral-300 hover:text-white" href="https://linkedin.com/in/brian-anyona" target="_blank">
+<svg class="w-3.5 h-3.5 sm:w-4 sm:h-4" fill="currentColor" viewbox="0 0 24 24">
+<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+</svg>
+                        LinkedIn
+                    </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8 border-t border-white/5">
+<div class="flex flex-col gap-4 sm:gap-6">
+<!-- Main Footer Content -->
+<div class="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+<div class="flex items-center gap-2 sm:gap-3">
+<div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center text-white text-[9px] sm:text-[10px] font-bold">
+                        BA
+                    </div>
+<div>
+<div class="text-xs sm:text-sm font-medium text-neutral-300">Brian Anyona</div>
+<div class="text-[9px] sm:text-[10px] text-neutral-500">The Catholic University of America</div>
+</div>
+</div>
+<div class="font-mono text-[8px] sm:text-[10px] text-neutral-600 text-center">
+                    CO₂ + H₂O &rarr; H₂CO₃ &rarr; H⁺ + HCO₃⁻ &rarr; CO₃&sup2;⁻ + Ca&sup2;⁺ &rarr; CaCO₃&darr;
+                </div>
+</div>
+<!-- Bottom Bar -->
+<div class="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-white/5">
+<div class="text-neutral-600 text-[10px] sm:text-xs text-center sm:text-left">
+                    &copy; 2025 Crystal Growth of CaCO₃ in Self-Healing Concrete | Research Project
+                </div>
+<div class="flex items-center gap-3 sm:gap-4 text-[10px] sm:text-xs text-neutral-500">
+<span>MICP Technology</span>
+<span class="w-1 h-1 rounded-full bg-neutral-700"></span>
+<span>Sustainable Construction</span>
+</div>
+</div>
+</div>
+</footer>
+
+<div class="" data-v-b007cd=""><!-- --></div><div data-id="dpadflhmiohjfhhaehelneimpllfbpcg" id="wp-extension"></div></body>
