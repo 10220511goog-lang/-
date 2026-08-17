@@ -141,6 +141,50 @@ export default function Home() {
       {/* Interactive Labs Section styled directly from Apple dynamic specs */}
       <AppleInteractiveHealing />
 
+      {/* 1.5. Self-Healing Interactive Lab Entry */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl border border-emerald-400/20 bg-gradient-to-br from-[#151a15] via-[#101710] to-[#0d110d] p-6 sm:p-8 lg:p-10 shadow-2xl">
+          <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-emerald-500/10 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 left-1/3 h-48 w-48 rounded-full bg-cyan-500/10 blur-3xl" />
+          <div className="relative z-10 grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+            <div className="lg:col-span-7 space-y-4">
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-[10px] font-mono font-semibold tracking-[0.18em] text-emerald-300">
+                <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />
+                NEW / INTERACTIVE LAB
+              </div>
+              <h2 className="text-3xl font-display font-extrabold tracking-tight text-[#e0e7e0] sm:text-4xl">
+                自癒互動實驗室
+              </h2>
+              <p className="max-w-2xl text-sm leading-relaxed text-[#e0e7e0]/70">
+                親自觀察裂縫如何被水分、細菌與 CaCO₃ 結晶逐步封閉。透過互動模擬器探索 MICP 自癒混凝土的六個科學階段。
+              </p>
+              <Link
+                to="/lab"
+                className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 px-5 py-3 text-xs font-bold tracking-wider text-[#0d110d] shadow-lg transition hover:from-emerald-500 hover:to-teal-500"
+              >
+                進入自癒互動實驗室
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="lg:col-span-5">
+              <Link to="/lab" className="group block rounded-2xl border border-emerald-500/15 bg-[#090b09]/80 p-4 transition hover:border-emerald-400/40 hover:bg-[#0b120b]">
+                <div className="mb-4 flex items-center justify-between text-[10px] font-mono tracking-widest text-emerald-400/70">
+                  <span>MICP-SIMULATION.LAB</span>
+                  <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />LIVE</span>
+                </div>
+                <div className="relative h-36 overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-slate-700/70 via-slate-900 to-emerald-950/30">
+                  <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "linear-gradient(rgba(16,185,129,0.25) 1px, transparent 1px), linear-gradient(90deg, rgba(16,185,129,0.25) 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
+                  <div className="absolute left-1/2 top-1/2 h-1 w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-red-500/80 via-cyan-300/90 to-emerald-400/80 shadow-[0_0_18px_rgba(34,211,238,0.45)] transition group-hover:shadow-[0_0_30px_rgba(34,211,238,0.8)]" />
+                  <div className="absolute left-[22%] top-[38%] h-2 w-2 rounded-full bg-emerald-300 shadow-[0_0_12px_rgba(52,211,153,0.9)] animate-pulse" />
+                  <div className="absolute left-[62%] top-[60%] h-2 w-2 rounded-full bg-cyan-300 shadow-[0_0_12px_rgba(103,232,249,0.9)] animate-pulse [animation-delay:400ms]" />
+                  <div className="absolute bottom-3 left-3 rounded-md border border-white/10 bg-black/60 px-2 py-1 text-[9px] font-mono text-neutral-300">裂縫封閉進度 0—100%</div>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. Core Value Metrics */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center space-y-3">
