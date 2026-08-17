@@ -146,12 +146,34 @@ export default function InteractiveLab() {
     const observer = new MutationObserver(translate);
     observer.observe(root, { subtree: true, childList: true, characterData: true });
 
-    // 原始網站的 DOM 與互動腳本在 React 容器掛載後執行，保留原版階段切換、模擬與旁白行為。
-    const script = document.createElement("script");
-    script.type = "text/javascript";
-    script.text = referenceInteractions;
-    document.body.appendChild(script);
+    // 將原始腳本封裝成可呼叫 API，避免 innerHTML 的 inline handler 在 React 模組作用域中失效。
+    type InteractionApi = Record<string, (...args: number[]) => void>;
+    let interactionApi: InteractionApi = {};
+    try {
+      interactionApi = new Function(`${referenceInteractions}\nreturn { startSimulation, resetSimulation, goToSlide, nextSlide, prevSlide, toggleNarration, toggleAutoPlay, updateSpeechRate, updateSelectedVoice, testVoice };`)() as InteractionApi;
+    } catch (error) {
+      console.error("GreenBuilt Lab interaction initialization failed", error);
+    }
     translate();
+    const bridgeInlineEvents = () => {
+      root.querySelectorAll<HTMLElement>("[onclick], [onchange]").forEach((element) => {
+        (["onclick", "onchange"] as const).forEach((attribute) => {
+          const expression = element.getAttribute(attribute);
+          if (!expression) return;
+          const match = expression.trim().match(/^([A-Za-z_$][\w$]*)\(([^)]*)\)$/);
+          if (!match) return;
+          const functionName = match[1];
+          const rawArguments = match[2].trim();
+          const args = rawArguments ? rawArguments.split(",").map((value) => Number(value.trim())) : [];
+          element.removeAttribute(attribute);
+          element.addEventListener(attribute === "onclick" ? "click" : "change", () => {
+            const handler = interactionApi[functionName];
+            if (typeof handler === "function") handler(...args);
+          });
+        });
+      });
+    };
+    bridgeInlineEvents();
 
     const start = window.setTimeout(() => {
       root.querySelectorAll<HTMLElement>(".animate-on-scroll").forEach((element) => {
@@ -162,7 +184,6 @@ export default function InteractiveLab() {
     return () => {
       window.clearTimeout(start);
       observer.disconnect();
-      script.remove();
       if ("speechSynthesis" in window) window.speechSynthesis.cancel();
       const canvas = root.querySelector<HTMLCanvasElement>("#simulationCanvas");
       const context = canvas?.getContext("2d");
