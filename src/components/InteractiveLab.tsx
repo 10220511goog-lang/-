@@ -107,7 +107,7 @@ const translations: Array<[string, string]> = [
   ["© 2025 Crystal Growth of CaCO₃ in Self-Healing Concrete | Research Project", "© 2025 自癒混凝土中的 CaCO₃ 結晶生長｜研究計畫"],
 ];
 
-function translateTextNodes(root: HTMLElement) {
+function translateTextNodes(root: Node) {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
   const nodes: Text[] = [];
   let current: Node | null = walker.nextNode();
@@ -116,7 +116,8 @@ function translateTextNodes(root: HTMLElement) {
     current = walker.nextNode();
   }
   nodes.forEach((node) => {
-    let value = node.nodeValue ?? "";
+    const original = node.nodeValue ?? "";
+    let value = original;
     translations.forEach(([from, to]) => {
       if (from === "in") {
         value = value.replace(/\bin\b/g, to);
@@ -124,7 +125,8 @@ function translateTextNodes(root: HTMLElement) {
         value = value.split(from).join(to);
       }
     });
-    node.nodeValue = value;
+    // 關鍵：文字未改變時不要寫回 nodeValue，避免觸發 MutationObserver 無限循環。
+    if (value !== original) node.nodeValue = value;
   });
 }
 
@@ -136,15 +138,12 @@ export default function InteractiveLab() {
     const root = rootRef.current;
     if (!root) return;
 
-    let translating = false;
-    const translate = () => {
-      if (translating) return;
-      translating = true;
-      translateTextNodes(root);
-      translating = false;
-    };
-    const observer = new MutationObserver(translate);
-    observer.observe(root, { subtree: true, childList: true, characterData: true });
+    const observer = new MutationObserver((records) => {
+      records.forEach((record) => {
+        record.addedNodes.forEach((node) => translateTextNodes(node));
+      });
+    });
+    observer.observe(root, { subtree: true, childList: true });
 
     // 將原始腳本封裝成可呼叫 API，避免 innerHTML 的 inline handler 在 React 模組作用域中失效。
     type InteractionApi = Record<string, (...args: number[]) => void>;
@@ -154,7 +153,7 @@ export default function InteractiveLab() {
     } catch (error) {
       console.error("GreenBuilt Lab interaction initialization failed", error);
     }
-    translate();
+    translateTextNodes(root);
     const invoke = (functionName: string, ...args: number[]) => {
       const handler = interactionApi[functionName];
       if (typeof handler !== "function") {
