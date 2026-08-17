@@ -138,6 +138,9 @@ export default function InteractiveLab() {
     const root = rootRef.current;
     if (!root) return;
 
+    const previousTitle = document.title;
+    document.title = "自癒互動實驗室｜GreenBuilt";
+
     const observer = new MutationObserver((records) => {
       records.forEach((record) => {
         record.addedNodes.forEach((node) => translateTextNodes(node));
@@ -225,6 +228,7 @@ export default function InteractiveLab() {
     return () => {
       window.clearTimeout(start);
       observer.disconnect();
+      document.title = previousTitle;
       root.removeEventListener("click", clickHandler);
       root.removeEventListener("change", changeHandler);
       if ("speechSynthesis" in window) window.speechSynthesis.cancel();
